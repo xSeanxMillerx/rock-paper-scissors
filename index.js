@@ -16,26 +16,26 @@ const computerPlay = () => {
     return computerSelection = 'scissors'
     }
 }
-// console.log(computerPlay()) ---> return computerSelection = 'rock', 'paper' or 'scissors'
+// console.log(computerPlay()) ---> prints: 'rock', 'paper' or 'scissors'
 
 // ------------------------------------------------------------------------------------------
 // playerPlay : to make the player choose between 'rock', 'paper' or 'scissors'
 const playerPlay = () => {
 // to display a dialog and let the player type his choice between "rock", "paper", or "scissors"
 let inputPlayer = prompt('Type "rock", "paper", or "scissors"')
-// to make inputPlayer case insensitive
+// to make inputPlayer case insensitive (to compare with computerSelection easily)
 let playerSelection = inputPlayer.toLocaleLowerCase();
 // playerSelection will store the return value of playerPlay()
 return playerSelection 
 }
-// console.log(playerPlay()) ---> return playerSelection = 'rock', 'paper' or 'scissors'
+// console.log(playerPlay()) ---> prints: 'rock', 'paper' or 'scissors'
 
 // ------------------------------------------------------------------------------------------
 // playRound() : to play a single round
 const playRound = (playerSelection, computerSelection) => {    
-// return value of the first function and use it as first argument
+// use the return value of computerPlay() and use it as first argument
 computerSelection = computerPlay();
-// return value of the second function and use it as second argument
+// use the return value of playerPlay() and use it as second argument
 playerSelection = playerPlay();
 
 // roundWinner will be use to store the return value of playRound()
@@ -57,7 +57,7 @@ let roundWinner = "";
         console.log('🟢 You won this round!');
         console.log('------------------------');       
         return roundWinner = 'player'
-    // Others (where computer wins the round)
+    // Others conditions (where computer wins the round)
     } else {
          // Logs to resume round
         console.log(`You chose: ${playerSelection}`);
@@ -67,10 +67,10 @@ let roundWinner = "";
         return roundWinner = 'computer'
        }       
 }
-// playRound() ---> return computerSelection = 'tie', 'player' or 'computer'
+// console.log(playRound()) ---> prints: 'tie', 'player' or 'computer'
 
 // ------------------------------------------------------------------------------------------
-// function playGame : to play a five round game
+// function playGame : to play a five rounds game
 const playGame = () => {
 // To store points/ties 
 let playerPoints = 0;
