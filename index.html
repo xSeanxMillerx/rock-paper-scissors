@@ -2,11 +2,72 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1>Rock Paper Scissors!</h1>
+
+    <div class="gameScreen">
+      <div class="result" style="background-color: aquamarine">
+        <p>And the winner is...</p>
+      </div>
+
+      <div class="screenPlayers" style="background-color: aqua">
+        <div class="divPlayerImg">
+          <img src="./img/player.jpeg" alt="" class="playerImg" />
+        </div>
+        <div class="screenPlayer" style="background-color: rgb(246, 136, 136)">
+          <div class="screenPlayerTxt">Player choice:</div>
+          <div class="screenPlayerImg"></div>
+        </div>
+        <div
+          class="screenComputer"
+          style="background-color: rgb(175, 182, 255)"
+        >
+          <div class="screenComputerTxt">Computer choice:</div>
+        </div>
+        <div class="divComputerImg">
+          <img src="./img/computer.jpeg" alt="" class="computerImg" />
+        </div>
+      </div>
+
+      <div class="gameBtn" style="background-color: rgb(165, 231, 165)">
+        <button class="startBtn">Start</button>
+      </div>
+
+      <div class="screenPlayersSelection" style="background-color: cadetblue">
+        <p class="screenPlayerSelectionTxt">
+          You have to chose between Rock, Paper & Scissors
+        </p>
+        <div
+          class="screenPlayerSelections"
+          style="background-color: rgb(243, 246, 187)"
+        >
+          <div class="rock" style="background-color: rgb(165, 231, 165)">
+            <img src="./img/rock.jpeg" alt="" />
+            <p>Rock</p>
+          </div>
+          <div class="paper" style="background-color: rgb(193, 158, 222)">
+            <img src="./img/paper.jpeg" alt="" />
+            <p>Paper</p>
+          </div>
+          <div class="scissors" style="background-color: rgb(230, 170, 196)">
+            <img src="./img/scissors.jpeg" alt="" />
+            <p>Scissors</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./index.js"></script>
   </body>
 </html>
+
+<!---->

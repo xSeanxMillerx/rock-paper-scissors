@@ -22,9 +22,9 @@ const computerPlay = () => {
 // playerPlay : to make the player choose between 'rock', 'paper' or 'scissors'
 const playerPlay = () => {
 // to display a dialog and let the player type his choice between "rock", "paper", or "scissors"
-let inputPlayer = prompt('Type "rock", "paper", or "scissors"')
+// ---> DECOCHER let inputPlayer = prompt('Type "rock", "paper", or "scissors"')
 // to make inputPlayer case insensitive (to compare with computerSelection easily)
-let playerSelection = inputPlayer.toLocaleLowerCase();
+// ---> DECOCHER let playerSelection = inputPlayer.toLocaleLowerCase();
 // playerSelection will store the return value of playerPlay()
 return playerSelection 
 }
@@ -50,7 +50,9 @@ let roundWinner = "";
         console.log('------------------------');
         return roundWinner = 'tie'
     // All the conditions where the player wins the round    
-    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') 
+    || (playerSelection === 'paper' && computerSelection === 'rock') 
+    || (playerSelection === 'scissors' && computerSelection === 'paper')) {
          // Logs to resume round
         console.log(`You chose: ${playerSelection}`);
         console.log(`Computer chose: ${computerSelection}`);
@@ -111,4 +113,21 @@ console.log('------------------------ NEW GAME ------------------------');
         console.log('🟠 Tie! 🟠');
     }
 }
-playGame() 
+// playGame() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

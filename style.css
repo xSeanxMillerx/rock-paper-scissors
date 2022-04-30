@@ -1,0 +1,86 @@
+/* GLOBAL */
+@font-face {
+    font-family:'True2D';
+    src: url('./true_2d/True2D.otf') format('oft'),
+         url('./true_2d/True2D.ttf') format('ttf');
+
+}
+* {
+   
+    font-family: 'Press Start 2P', cursive;
+}
+p, .screenComputerTxt, .screenPlayerTxt {
+    padding: 4px;
+}
+img {
+    height: 90px;
+    width: 90px;
+}
+/* BODY */
+body {
+    align-items: center;
+    height: 1024px;
+    width: 1132px;
+    max-width: max-content;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    padding: 12px;
+    border: 5px black dashed;
+}
+/* GAME SCREEN */
+.result {
+    text-align: center;
+}
+.gameScreen {
+    border: 4px black dashed;
+
+}
+
+/* SCREEN PLAYERS */
+    /* PLAYER */
+.screenPlayers {
+    border: 3px solid black;
+    height: 200px;
+    display: flex;
+    flex: 1;
+}
+.divPlayerImg, .divComputerImg {
+  display: flex;
+}
+.playerImg, .computerImg {
+  margin: auto
+}
+.screenPlayer, .screenComputer {
+    flex:4
+}
+.screenComputerTxt, .screenPlayerTxt {
+    text-align: center;
+}
+
+/* BUTTON */
+.gameBtn {
+    display:flex;
+   justify-content: center; 
+   align-items: center;  
+   margin: 20px 0;
+}
+.startBtn {
+padding: 8px;
+}
+/* PLAYER SELECTION */
+.screenPlayerSelections {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.rock, .paper, .scissors {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
