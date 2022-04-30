@@ -115,7 +115,26 @@ console.log('------------------------ NEW GAME ------------------------');
 }
 // playGame() 
 
+// Play Rock
+const playRockRound = document.querySelector('.rock')
+playRockRound.addEventListener('click', () => {
+    playerSelection = 'rock'
+    playRound('rock',computerPlay)
+}, capture = true)
 
+// Play paper
+const playPaperRound = document.querySelector('.paper')
+playPaperRound.addEventListener('click', () => {
+    playerSelection = 'paper'
+    playRound('paper',computerPlay)
+}, capture = true)
+
+// Play scissors 
+const playScissorsRound = document.querySelector('.scissors')
+playScissorsRound.addEventListener('click', () => {
+    playerSelection = 'scissors'
+    playRound('scissors',computerPlay)
+}, capture = true)
 
 
 
