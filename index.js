@@ -126,7 +126,9 @@ playRockRound.addEventListener('click', () => {
         upPlayerScore.textContent = playerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}.
 
         🟩 You won the round!`
@@ -139,7 +141,8 @@ playRockRound.addEventListener('click', () => {
         console.log('Computer point(s): ' + computerPoints);
         console.log('Tie(s): '+ tiePoints);
         console.log('------------------------');
-       
+
+        return numberOfRound;
 
         } else if (roundWinner === 'computer') {
         computerPoints ++
@@ -148,7 +151,9 @@ playRockRound.addEventListener('click', () => {
         upComputerScore.textContent = computerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}. 
 
         🟥 Computer won the round!`
@@ -162,11 +167,16 @@ playRockRound.addEventListener('click', () => {
         console.log('Tie(s): '+ tiePoints);
         console.log('------------------------');
 
+        return numberOfRound;
+
         } else {
         tiePoints ++
         numberOfRound++
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
 
         🟧 Tie!`
       // ----------------------------------------------------------------
@@ -178,6 +188,8 @@ playRockRound.addEventListener('click', () => {
       console.log('Computer point(s): ' + computerPoints);
       console.log('Tie(s): '+ tiePoints);
       console.log('------------------------');
+
+      return numberOfRound;
         }
 }, capture = true)
 
@@ -197,10 +209,14 @@ playPaperRound.addEventListener('click', () => {
         upPlayerScore.textContent = playerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}.
 
         🟩 You won the round!`
+
+        
         // ----------------------------------------------------------------
         console.log('Round: ' + numberOfRound);
         console.log(`You chose: ${playerSelection}`);
@@ -211,6 +227,7 @@ playPaperRound.addEventListener('click', () => {
         console.log('Tie(s): '+ tiePoints);
         console.log('------------------------');
        
+        return numberOfRound;
 
         } else if (roundWinner === 'computer') {
         computerPoints ++
@@ -219,7 +236,9 @@ playPaperRound.addEventListener('click', () => {
         upComputerScore.textContent = computerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}. 
 
         🟥 Computer won the round!`
@@ -237,7 +256,10 @@ playPaperRound.addEventListener('click', () => {
         tiePoints ++
         numberOfRound++
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
 
         🟧 Tie!`
       // ----------------------------------------------------------------
@@ -268,7 +290,9 @@ playScissorsRound.addEventListener('click', () => {
         upPlayerScore.textContent = playerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}.
 
         🟩 You won the round!`
@@ -290,7 +314,9 @@ playScissorsRound.addEventListener('click', () => {
         upComputerScore.textContent = computerPoints
 
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
         Computer chose: ${computerSelection}. 
 
         🟥 Computer won the round!`
@@ -304,11 +330,16 @@ playScissorsRound.addEventListener('click', () => {
         console.log('Tie(s): '+ tiePoints);
         console.log('------------------------');
 
+        return numberOfRound;
+
         } else {
         tiePoints ++
         numberOfRound++
         let upScreenPlayers = document.querySelector('.screenPlayersTxt')
-        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+        upScreenPlayers.textContent = `Round: ${numberOfRound}
+
+        You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
 
         🟧 Tie!`
       // ----------------------------------------------------------------
@@ -323,8 +354,26 @@ playScissorsRound.addEventListener('click', () => {
         }
 }, capture = true)
 
+// New game
+const newGame = document.querySelector('.startBtn')
+newGame.addEventListener('click', () => {
+let revealHidden = document.querySelector('.hidden')
+revealHidden.classList.remove('hidden')
+
+let startBtnReady = document.querySelector('.startBtn')
+startBtnReady.textContent = 'FIGHT!'
+
+startBtnReady.addEventListener('click', (e) => {
+e.target.classList.add('hidden')
+})
 
 
 
+
+
+
+
+
+})
 
 
