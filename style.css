@@ -48,6 +48,9 @@ h1 {
 }
 .divPlayerImg, .divComputerImg {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .playerImg, .computerImg {
   margin: auto
@@ -59,7 +62,18 @@ h1 {
     text-align: center;
 }
 
-/* BUTTON */
+/* */
+.screenPlayersTxt {
+    background-color: darkolivegreen;
+    flex: 4;
+    text-align: center;
+    white-space: pre-line;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* START */
 .gameBtn {
     display:flex;
    justify-content: center; 

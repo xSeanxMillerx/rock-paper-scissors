@@ -34,38 +34,29 @@ return playerSelection
 // playRound() : to play a single round
 const playRound = (playerSelection, computerSelection) => {    
 // use the return value of computerPlay() and use it as first argument
-computerSelection = computerPlay();
+// ---> DECOCHER computerSelection = computerPlay();
 // use the return value of playerPlay() and use it as second argument
 playerSelection = playerPlay();
 
 // roundWinner will be use to store the return value of playRound()
-let roundWinner = "";
+// ---> DECOCHER let roundWinner = "";
 
     // All the conditions where the round = tie
     if (playerSelection === computerSelection) {
         // Logs to resume round
-        console.log(`You chose: ${playerSelection}`);
-        console.log(`Computer chose: ${computerSelection}`);
-        console.log('🟠 Tie!');
-        console.log('------------------------');
+  
         return roundWinner = 'tie'
     // All the conditions where the player wins the round    
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') 
     || (playerSelection === 'paper' && computerSelection === 'rock') 
     || (playerSelection === 'scissors' && computerSelection === 'paper')) {
          // Logs to resume round
-        console.log(`You chose: ${playerSelection}`);
-        console.log(`Computer chose: ${computerSelection}`);
-        console.log('🟢 You won this round!');
-        console.log('------------------------');       
+      
         return roundWinner = 'player'
     // Others conditions (where computer wins the round)
     } else {
          // Logs to resume round
-        console.log(`You chose: ${playerSelection}`);
-        console.log(`Computer chose: ${computerSelection}`);
-        console.log('🔴 You lose this round!');
-        console.log('------------------------');       
+        
         return roundWinner = 'computer'
        }       
 }
@@ -75,9 +66,6 @@ let roundWinner = "";
 // function playGame : to play a five rounds game
 const playGame = () => {
 // To store points/ties 
-let playerPoints = 0;
-let computerPoints = 0;
-let tiePoints = 0;
 
 console.log('------------------------ NEW GAME ------------------------');
 
@@ -115,35 +103,225 @@ console.log('------------------------ NEW GAME ------------------------');
 }
 // playGame() 
 
-// Play Rock
+// ----------------------
+let numberOfRound = 0;
+let playerPoints = 0;
+let computerPoints = 0;
+let tiePoints = 0;
+
+
+// Play rock
 const playRockRound = document.querySelector('.rock')
 playRockRound.addEventListener('click', () => {
+    
     playerSelection = 'rock'
-    playRound('rock',computerPlay)
+    computerSelection = computerPlay()
+    let roundWinner = playRound('rock', computerSelection)
+
+  
+     if (roundWinner === 'player') {
+        playerPoints ++
+        numberOfRound++
+        let upPlayerScore = document.querySelector('.playerScore')
+        upPlayerScore.textContent = playerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
+
+        🟩 You won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟩 You won this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+       
+
+        } else if (roundWinner === 'computer') {
+        computerPoints ++
+        numberOfRound++
+        let upComputerScore = document.querySelector('.computerScore')
+        upComputerScore.textContent = computerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}. 
+
+        🟥 Computer won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟥 You lose this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+
+        } else {
+        tiePoints ++
+        numberOfRound++
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+
+        🟧 Tie!`
+      // ----------------------------------------------------------------
+      console.log('Round: ' + numberOfRound);
+      console.log(`You chose: ${playerSelection}`);
+      console.log(`Computer chose: ${computerSelection}`);
+      console.log('🟧 You lose this round!'); 
+      console.log('Your point(s): ' + playerPoints);
+      console.log('Computer point(s): ' + computerPoints);
+      console.log('Tie(s): '+ tiePoints);
+      console.log('------------------------');
+        }
 }, capture = true)
 
 // Play paper
 const playPaperRound = document.querySelector('.paper')
 playPaperRound.addEventListener('click', () => {
+    
     playerSelection = 'paper'
-    playRound('paper',computerPlay)
+    computerSelection = computerPlay()
+    let roundWinner = playRound('paper', computerSelection)
+
+  
+     if (roundWinner === 'player') {
+        playerPoints ++
+        numberOfRound++
+        let upPlayerScore = document.querySelector('.playerScore')
+        upPlayerScore.textContent = playerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
+
+        🟩 You won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟩 You won this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+       
+
+        } else if (roundWinner === 'computer') {
+        computerPoints ++
+        numberOfRound++
+        let upComputerScore = document.querySelector('.computerScore')
+        upComputerScore.textContent = computerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}. 
+
+        🟥 Computer won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟥 You lose this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+
+        } else {
+        tiePoints ++
+        numberOfRound++
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+
+        🟧 Tie!`
+      // ----------------------------------------------------------------
+      console.log('Round: ' + numberOfRound);
+      console.log(`You chose: ${playerSelection}`);
+      console.log(`Computer chose: ${computerSelection}`);
+      console.log('🟧 You lose this round!'); 
+      console.log('Your point(s): ' + playerPoints);
+      console.log('Computer point(s): ' + computerPoints);
+      console.log('Tie(s): '+ tiePoints);
+      console.log('------------------------');
+        }
 }, capture = true)
 
-// Play scissors 
+// Play scissors
 const playScissorsRound = document.querySelector('.scissors')
 playScissorsRound.addEventListener('click', () => {
+    
     playerSelection = 'scissors'
-    playRound('scissors',computerPlay)
+    computerSelection = computerPlay()
+    let roundWinner = playRound('scissors', computerSelection)
+
+  
+     if (roundWinner === 'player') {
+        playerPoints ++
+        numberOfRound++
+        let upPlayerScore = document.querySelector('.playerScore')
+        upPlayerScore.textContent = playerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}.
+
+        🟩 You won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟩 You won this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+       
+
+        } else if (roundWinner === 'computer') {
+        computerPoints ++
+        numberOfRound++
+        let upComputerScore = document.querySelector('.computerScore')
+        upComputerScore.textContent = computerPoints
+
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You chose: ${playerSelection}.
+        Computer chose: ${computerSelection}. 
+
+        🟥 Computer won the round!`
+        // ----------------------------------------------------------------
+        console.log('Round: ' + numberOfRound);
+        console.log(`You chose: ${playerSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log('🟥 You lose this round!'); 
+        console.log('Your point(s): ' + playerPoints);
+        console.log('Computer point(s): ' + computerPoints);
+        console.log('Tie(s): '+ tiePoints);
+        console.log('------------------------');
+
+        } else {
+        tiePoints ++
+        numberOfRound++
+        let upScreenPlayers = document.querySelector('.screenPlayersTxt')
+        upScreenPlayers.textContent = `You both chose ${playerSelection}.
+
+        🟧 Tie!`
+      // ----------------------------------------------------------------
+      console.log('Round: ' + numberOfRound);
+      console.log(`You chose: ${playerSelection}`);
+      console.log(`Computer chose: ${computerSelection}`);
+      console.log('🟧 You lose this round!'); 
+      console.log('Your point(s): ' + playerPoints);
+      console.log('Computer point(s): ' + computerPoints);
+      console.log('Tie(s): '+ tiePoints);
+      console.log('------------------------');
+        }
 }, capture = true)
-
-
-
-
-
-
-
-
-
 
 
 
