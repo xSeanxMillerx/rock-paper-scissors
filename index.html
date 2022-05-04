@@ -15,48 +15,46 @@
     <h1>Rock Paper Scissors!</h1>
 
     <div class="gameScreen">
-      <div class="result" style="background-color: aquamarine">
+      <div class="result">
         <p class="resultText"></p>
       </div>
 
-      <div class="screenPlayers" style="background-color: aqua">
+      <div class="screenPlayers">
         <div class="divPlayerImg">
           <p class="playerScore scores">O</p>
-          <img src="./img/player.jpeg" alt="" class="playerImg" />
+          <div class="backgroundPlayerImg">
+            <img src="./img/player.jpeg" alt="" class="playerImg" />
+          </div>
         </div>
         <div class="screenPlayersTxt"></div>
         <div class="divComputerImg">
           <p class="computerScore scores">0</p>
-          <img src="./img/computer.jpeg" alt="" class="computerImg" />
+          <div class="backgroundComputerImg">
+            <img src="./img/computer.jpeg" alt="" class="computerImg" />
+          </div>
         </div>
       </div>
 
-      <div class="gameBtn" style="background-color: rgb(165, 231, 165)">
+      <div class="gameBtn">
         <button class="startBtn resultBtn">
           Press start to play (5 rounds)
         </button>
       </div>
 
-      <div
-        class="screenPlayersSelection hidden"
-        style="background-color: cadetblue"
-      >
+      <div class="screenPlayersSelection hidden">
         <p class="screenPlayerSelectionTxt">
           You have to chose between Rock, Paper & Scissors
         </p>
-        <div
-          class="hidden screenPlayerSelections"
-          style="background-color: rgb(243, 246, 187)"
-        >
-          <div class="rock" style="background-color: rgb(165, 231, 165)">
+        <div class="hidden screenPlayerSelections">
+          <div class="rock">
             <img src="./img/rock.jpeg" alt="" />
             <p>Rock</p>
           </div>
-          <div class="paper" style="background-color: rgb(193, 158, 222)">
+          <div class="paper">
             <img src="./img/paper.jpeg" alt="" />
             <p>Paper</p>
           </div>
-          <div class="scissors" style="background-color: rgb(230, 170, 196)">
+          <div class="scissors">
             <img src="./img/scissors.jpeg" alt="" />
             <p>Scissors</p>
           </div>
