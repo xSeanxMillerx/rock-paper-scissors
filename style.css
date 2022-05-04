@@ -35,7 +35,15 @@ h1 {
 }
 .gameScreen {
     border: 4px black dashed;
+width: 780px;
 
+}
+
+.result {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* SCREEN PLAYERS */
