@@ -11,7 +11,7 @@ You will see the result of each round and the final one.
 ---
 ## How to use project?
 
-You can play <a href="https://xseanxmillerx.github.io/rock-paper-scissors/">there</a>
+You can play <a href="https://xseanxmillerx.github.io/rock-paper-scissors/">there</a>.
 
 ---
 ## What i have learn.
